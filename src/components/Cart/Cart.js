@@ -22,7 +22,7 @@ const Cart = (props) => {
             <h3>Items Ordered: {totalQuantity}</h3>
             <div className="oder-cost">
 
-                    <p>Items: ${total}</p>
+                    <p>Items: ${total.toFixed(2)}</p>
                     <p>Shipping & Handling:	$15</p>
                     <p>Total before tax: ${tax.toFixed(2)}</p>
                     <h3>Order Total: ${grandTotal.toFixed(2)}</h3>

@@ -12,7 +12,18 @@ const Shop = () => {
 
 
     const handalToCart = product =>{
-         const newCart = [...cart,product]
+        const exists = cart.find(pd => pd.key === product.key)
+        let newCart = [];
+        if(exists){
+            const rest = cart.filter(pd => pd.key !== product.key)
+            exists.quantity += 1;
+            newCart = [...rest,product]
+        }
+        else{
+            product.quantity = 1;
+            newCart = [...cart,product]
+        }
+          
          setCart(newCart)
          addToDb(product.key);
     }
