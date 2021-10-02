@@ -26,8 +26,9 @@ const Cart = (props) => {
                     <p>Shipping & Handling:	$15</p>
                     <p>Total before tax: ${tax.toFixed(2)}</p>
                     <h3>Order Total: ${grandTotal.toFixed(2)}</h3>
+                    {props.children}
                 </div>
-                <button>Review your Order</button>
+                
         </div>
     );
 };
